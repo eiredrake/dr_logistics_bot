@@ -1,0 +1,35 @@
+{% extends "logistics/base_generic.html" %}
+{% load render_table from django_tables2 %}
+{% block content %}
+
+<!doctype html>
+<html>
+    <head>
+        <title>DRKY Logistics Bot - Pending Transactions</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <table>
+            <th>
+                <H3>Pending Transactions</H3>
+            </th>
+            <tr>
+                <td>
+                    {% render_table table_transaction %}
+                </td>
+            </tr>
+        </table>
+        <table>
+            <th>
+                <H3>Pending Actions</H3>
+            </th>
+            <tr>
+                <td>
+                    {% render_table table_action %}
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+{% endblock %}
