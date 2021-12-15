@@ -3,58 +3,27 @@ from enum import Enum, auto, IntEnum
 DATE_FORMAT = '%m/%d/%Y'
 TWELVE_HOUR_TIME_FORMAT = '%I:%M:%S %p'
 DATE_WITH_TWELVE_HOUR_TIME_FORMAT = DATE_FORMAT + " " + TWELVE_HOUR_TIME_FORMAT
-
-class SkillLevel(IntEnum):
-    basic = auto()
-    proficient = auto()
-    master = auto()
-
-    @classmethod
-    def choices(cls):
-        return [(choice.value, choice.name) for choice in cls]
-
-
-class SkillCategory(IntEnum):
-    anomaly = 1
-    wasteland = 2
-    civilized = 3
-    combat = 4
-
-    @classmethod
-    def choices(cls):
-        return [(choice.value, choice.name) for choice in cls]
+CANCEL_EMOJI ='\U0000274C'
+GREEN_CHECKMARK_EMOJI ='\U00002705'
+A_EMOJI = '\U0001F170'
+B_EMOJI = '\U0001F171'
+OK_EMOJI = '\U0001F197'
+NO_EMOJI = '\U0001F6AB'
+ACCEPT_TRADE ='accept trade'
+CANCEL_TRADE = 'cancel trade'
+CANCEL_ACTION = 'cancel action'
+DELETE_ACTION = 'delete'
 
 
-class Strain(IntEnum):
-    Elitariat = auto()
-    Digitarian = auto()
-    Solestros = auto()
-    Pure_Blood = auto()
-    Baywalker = auto()
-    Yorker = auto()
-    Vegasian = auto()
-    Diesel_Jock = auto()
-    Rover = auto()
-    Saltwise = auto()
-    Full_Dead = auto()
-    Semper_Mort = auto()
-    Lascarian = auto()
-    Remnant = auto()
-    Retrograde = auto()
-    Tainted = auto()
-    Merican = auto()
-    Natural_One = auto()
-    Quiet_Folk = auto()
-    Accensorite = auto()
-    Red_Star = auto()
-    Unborn = auto()
-    Iron = auto()
-    Reclaimer = auto()
-    Unstable = auto()
+BOT_COMMANDER_ROLE = 'Bot Commander'
+WRITER_ROLE = 'Writer'
+GUIDE_ROLE = 'Guide'
+FULL_TICKET_ROLE = 'Full Ticket'
+STAFF_ROLE = 'Staff'
 
-    @classmethod
-    def choices(cls):
-        return [(choice.value, choice.name) for choice in cls]
+SUBMIT_RESEARCH = 'Submit Research'
+CANCEL_RESEARCH = 'Cancel'
+DELETE_BUTTON_TEXT = 'DELETE'
 
 
 class TradeResponse(Enum):

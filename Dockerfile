@@ -16,3 +16,5 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY . /dr_logistics/
+
+ENV PYTHONPATH "${PYTHONPATH}:/dr_logistics/"

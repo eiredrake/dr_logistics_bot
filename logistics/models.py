@@ -7,17 +7,13 @@ from django.db.models import CASCADE
 from django.conf import settings
 from django.forms import CheckboxInput, forms
 
-from src.constants.Constants import ActionType, Strain, SkillCategory, SkillLevel
+from src.constants.Constants import ActionType, DATE_WITH_TWELVE_HOUR_TIME_FORMAT
 
 try:
     from django.db import models
 except Exception:
     print('Exception: Django Not Found, please install it with "pip install django".')
     sys.exit()
-
-DATE_FORMAT = '%m/%d/%Y'
-TWELVE_HOUR_TIME_FORMAT = '%I:%M:%S %p'
-DATE_WITH_TWELVE_HOUR_TIME_FORMAT = DATE_FORMAT + " " + TWELVE_HOUR_TIME_FORMAT
 
 
 class ActionRecord(models.Model):
